@@ -1,7 +1,7 @@
 import { HiAcademicCap } from 'react-icons/hi';
 const journey = [
     {
-        years: "Aug 2022 - Present",
+        years: "Aug 2022 - May 2026",
         role: "B.tech (C.S.E)",
         institution: "Vision Institute of Technology, Aligarh"
     },

@@ -21,7 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${someTypeMono.variable} antialiased overflow-hidden relative`} style={{fontFamily: 'var(--font-family-primary)'}}>
+      <body className={`${someTypeMono.variable} antialiased overflow-hidden relative`} style={{fontFamily: 'var(--font-family-primary)'}} suppressHydrationWarning>
         <Gradient/>
         <RectangleTransition/>
         <PageTransition>

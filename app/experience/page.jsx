@@ -1,7 +1,7 @@
 "use client"
 import { motion } from 'framer-motion'
 
-const experience = () => {
+const Experience = () => {
   return (
     <motion.section 
       initial={{opacity:0}} 
@@ -10,9 +10,9 @@ const experience = () => {
         transition:
         {delay:2.4, duration:0.4, ease:"easeIn"}
         }}>
-      experience
+      Experience
     </motion.section>
   )
 }
 
-export default experience
+export default Experience

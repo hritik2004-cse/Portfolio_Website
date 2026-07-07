@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "tailwind-scrollbar"
 
 @theme {
   /* Breakpoints */
@@ -81,4 +82,20 @@ body {
 
 .btn-white {
   @apply bg-white text-primary hover:bg-white/90;
+}
+
+/* Swiper fix — give Swiper immediate touch control, no click-first needed */
+.swiper {
+  touch-action: none !important;
+}
+
+/* Swiper pagination dots styling */
+.swiper-pagination-bullet {
+  background: white;
+  opacity: 0.4;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--color-accent);
+  opacity: 1;
 }
