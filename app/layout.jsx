@@ -14,8 +14,19 @@ const someTypeMono = Sometype_Mono({
 });
 
 export const metadata = {
-  title: "Hritik Sharma's Portfolio",
-  description: "Modern and Stylish portfolio by Hritik Sharma",
+  title: "Hritik Sharma | Portfolio",
+  description: "Modern and Stylish portfolio by Hritik Sharma — Full-Stack Developer & CS Student.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png" },
+      { url: "/icon0.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", type: "image/png" },
+    ],
+  },
+  manifest: "/manifest.webmanifest",
 };
 
 export default function RootLayout({ children }) {

@@ -1,6 +1,11 @@
 {
   "name": "Hritik Sharma | Portfolio",
   "short_name": "Hritik",
+  "description": "Modern and Stylish portfolio by Hritik Sharma — Full-Stack Developer & CS Student.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d091a",
+  "theme_color": "#5810ff",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -14,8 +19,5 @@
       "type": "image/png",
       "purpose": "maskable"
     }
-  ],
-  "theme_color": "#000000",
-  "background_color": "#000000",
-  "display": "standalone"
+  ]
 }
