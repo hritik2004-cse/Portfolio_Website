@@ -87,15 +87,33 @@ body {
 /* Swiper fix — give Swiper immediate touch control, no click-first needed */
 .swiper {
   touch-action: none !important;
+  padding-bottom: 48px !important;
 }
 
-/* Swiper pagination dots styling */
+/* Swiper pagination styling */
+.swiper-pagination {
+  display: none !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 6px !important;
+  bottom: 100px !important;
+}
+
 .swiper-pagination-bullet {
-  background: white;
-  opacity: 0.4;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.25) !important;
+  opacity: 1 !important;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.swiper-pagination-bullet:hover {
+  background: rgba(255, 255, 255, 0.5) !important;
 }
 
 .swiper-pagination-bullet-active {
-  background: var(--color-accent);
-  opacity: 1;
+  width: 28px !important;
+  background: var(--color-accent) !important;
+  box-shadow: 0 0 10px 2px color-mix(in srgb, var(--color-accent) 50%, transparent) !important;
 }

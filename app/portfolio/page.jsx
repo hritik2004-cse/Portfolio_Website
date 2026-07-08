@@ -244,7 +244,7 @@ const Portfolio = () => {
     >
       <div className="container mx-auto w-full h-full flex flex-col justify-center">
         {/* heading */}
-        <h2 className="h2 mb-6 xl-mb-12 max-w-[600px]">
+        <h2 className="h2 mb-6 xl:mb-12 max-w-[600px]">
           My Latest <span className="text-accent">Work</span>
         </h2>
         {/* tabs */}
@@ -267,7 +267,7 @@ const Portfolio = () => {
             })}
           </TabsList>
           {/* tabs content */}
-          <div className="h-[400px] scrollbar scrollbar-thumb-accent scrollbar-track-accent">
+          <div className="h-[400px] scrollbar scrollbar-thumb-accent scrollbar-track-accent/5 overflow-y-scroll xl:overflow-y-visible mt-12 lg:mt-0">
             {categories.map((category) => {
               return (
                 <TabsContent key={category} value={category}>
@@ -278,7 +278,7 @@ const Portfolio = () => {
                     spaceBetween={30}
                     grabCursor={true}
                     allowTouchMove={true}
-                    className="w-full pb-10"
+                    className="w-full"
                   >
                     {projects
                       .filter((project) => project.category === category)
