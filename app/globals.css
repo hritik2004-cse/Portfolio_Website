@@ -38,7 +38,7 @@ body {
 
 /* Typography */
 .h1 {
-  @apply text-[40px] font-extrabold leading-[1] tracking-tight md:text-[52px] xl:text-[56px];
+  @apply text-[40px] font-extrabold leading-none tracking-tight md:text-[52px] xl:text-[56px];
 }
 
 .h2 {
@@ -55,7 +55,7 @@ body {
 
 /* Layout */
 .container {
-  @apply mx-auto w-full max-w-[var(--breakpoint-xl)] px-4;
+  @apply mx-auto w-full max-w-(--breakpoint-xl) px-4;
 }
 
 /* Buttons */
