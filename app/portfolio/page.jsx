@@ -278,7 +278,7 @@ const Portfolio = () => {
                     spaceBetween={30}
                     grabCursor={true}
                     allowTouchMove={true}
-                    className="w-full"
+                    className="w-full h-max xl:h-[460px]"
                   >
                     {projects
                       .filter((project) => project.category === category)
@@ -323,6 +323,7 @@ const Portfolio = () => {
                                   src={project.image}
                                   alt={project.image}
                                   fill
+                                  sizes="(max-width: 768px) 100vw, (max-width: 1130px) 60vw, 750px"
                                   className="object-cover"
                                 />
                               </div>
