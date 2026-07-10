@@ -27,8 +27,8 @@ const projects = [
     tech: [
       "React",
       "Next.js",
-      "Tailwind CSS",
       "Node.js",
+      "Tailwind CSS",
       "Express.js",
       "MongoDB",
       "AI",
@@ -38,19 +38,18 @@ const projects = [
   {
     id: 2,
     category: "Full-Stack",
-    title: "Nexuspace - Collaboration Platform",
+    title: "Nexuspace - Messaging app",
     description:
       "A professional real-time team collaboration platform featuring persistent workspaces, Kanban-style task management, and live group chat powered by Socket.io. Built with a full MERN stack and animated with Framer Motion for a polished, enterprise-grade experience.",
     github: "https://github.com/hritik2004-cse/Nexuspace",
     link: "https://project-nexuspace.vercel.app/",
     image: "/assets/work/nexuspace.png",
     tech: [
-      "React",
       "Next.js",
-      "Tailwind CSS",
       "Node.js",
-      "Express.js",
       "MongoDB",
+      "Tailwind CSS",
+      "Express.js",
       "Socket.io",
       "Framer Motion",
     ],
@@ -267,7 +266,7 @@ const Portfolio = () => {
             })}
           </TabsList>
           {/* tabs content */}
-          <div className="h-[400px] scrollbar scrollbar-thumb-accent scrollbar-track-accent/5 overflow-y-scroll xl:overflow-y-visible mt-12 lg:mt-0">
+          <div className="md:h-auto h-[400px] lg:max-h-[400px] scrollbar scrollbar-thumb-accent scrollbar-track-accent/5 overflow-y-scroll xl:overflow-y-visible mt-12 lg:mt-0 w-full">
             {categories.map((category) => {
               return (
                 <TabsContent key={category} value={category}>
@@ -285,15 +284,18 @@ const Portfolio = () => {
                       .map((project) => {
                         return (
                           <SwiperSlide key={project.id}>
-                            <div className="flex flex-col xl:flex-row gap-8 xl:gap-12">
+                            <div className="flex flex-col xl:flex-row gap-2 xl:gap-6">
                               {/* project info */}
-                              <div className="w-full max-w-[380px] flex flex-col gap-6 xl:gap-8 xl:pt-6 order-2 xl:order-0">
-                                <h3 className="h3">{project.title}</h3>
-                                <ul className="flex flex-wrap gap-4 xl:mb-4 max-w-[300px] min-h-[130px]">
+                              <div className="w-full max-w-[380px] md:max-w-full xl:max-w-[400px] flex flex-col justify-between xl:justify-center xl:gap-4 order-2 xl:order-0">
+                                <h3 className="h3 text-accent mb-3 md:my-5 xl:mb-0 w-full">
+                                  {project.title}
+                                </h3>
+                                {/* project tech */}
+                                <ul className="flex flex-wrap gap-2 xl:gap-3 min-w-full">
                                   {project.tech.map((item, index) => {
                                     return (
                                       <li
-                                        className="flex items-center gap-4 bg-[#a883ff]/13 h-[28px] px-[14px] rounded-full"
+                                        className="flex items-center bg-[#a883ff]/13 h-[28px] px-[14px] rounded-full text-xs md:text-sm lg:text-md"
                                         key={index}
                                       >
                                         {item}
@@ -301,16 +303,20 @@ const Portfolio = () => {
                                     );
                                   })}
                                 </ul>
+                                {/* project description */}
+                                <p className="max-w-full text-white/50 line-clamp-4 xl:line-clamp-3 text-sm md:text-md lg:text-lg my-4 md:my-5 xl:my-0">
+                                  {project.description}
+                                </p>
                                 {/* buttons */}
-                                <div className="flex flex-col sm:flex-row gap-4 items-start">
-                                  <Link href={project.link}>
-                                    <button className="btn btn-sm btn-accent flex gap-2">
+                                <div className="flex flex-col md:flex-row gap-4 items-center md:items-start w-full">
+                                  <Link href={project.link} target="_blank" className="w-full">
+                                    <button className="btn btn-sm btn-accent flex gap-2 min-w-[98%]">
                                       <MdArrowOutward className="text-xl" />
                                       <span>Live Project</span>
                                     </button>
                                   </Link>
-                                  <Link href={project.github}>
-                                    <button className="btn btn-sm btn-white flex gap-2">
+                                  <Link href={project.github} target="_blank" className="w-full">
+                                    <button className="btn btn-sm btn-white flex gap-2 min-w-[98%]">
                                       <FaGithub className="text-xl" />
                                       <span>Github Repo</span>
                                     </button>
@@ -318,13 +324,14 @@ const Portfolio = () => {
                                 </div>
                               </div>
                               {/* project img */}
-                              <div className="w-full h-[200px] md:h-[300px] xl:h-[400px] relative bg-pink-50/10 order-1 xl:order-0 rounded-lg overflow-hidden">
+                              <div className="w-full h-[200px] md:h-[400px] lg:h-[500px] xl:h-[400px] relative bg-pink-50/10 order-1 xl:order-0 rounded-lg overflow-hidden">
                                 <Image
                                   src={project.image}
                                   alt={project.image}
                                   fill
+                                  loading='lazy'
                                   sizes="(max-width: 768px) 100vw, (max-width: 1130px) 60vw, 750px"
-                                  className="object-cover"
+                                  className="object-cover object-top"
                                 />
                               </div>
                             </div>

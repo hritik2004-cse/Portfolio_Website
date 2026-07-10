@@ -23,14 +23,23 @@ const About = () => {
         <div className="flex flex-col xl:flex-row items-center gap-24 w-full h-[680px]">
           {/* img & social icons */}
           <div className="hidden xl:flex flex-col w-full h-full pt-14 max-w-[430px] relative ">
-            <Image src='/assets/avatar.png' width={320} height={496} alt="" className="z-20 relative"/>
+            <Image
+              src="/assets/avatar.png"
+              width={320}
+              height={496}
+              alt="developer of this page"
+              className="z-20 relative"
+            />
             {/* overlay */}
-            <div className="w-full h-[60px] absolute left-0 top-[400px] right-0 bg-linear-to-t from-primary via-primary/90 z-30"></div>
+            <div className="w-full h-[60px] absolute left-0 top-[380px] right-0 bg-linear-to-t from-primary via-primary/90 z-30"></div>
             {/* blob */}
             <div className="absolute top-[50px] left-[-80px] z-10">
-              <Blob containerStyles='w-[400px] h-[400px] '/>
+              <Blob containerStyles="w-[400px] h-[400px] " />
             </div>
-            <Socials className='flex gap-4 z-40 w-max transform translate-x-[30px]' iconStyles='w-[48px] h-[48px] text-[22px] text-accent hover:text-accent-hover transition-all flex items-center justify-center rounded-full cursor-pointer'/>
+            <Socials
+              containerStyles="flex gap-4 z-40 w-max transform translate-x-[30px]"
+              iconStyles="w-[48px] h-[48px] text-[22px] text-accent hover:text-accent-hover transition-all flex items-center justify-center rounded-full cursor-pointer"
+            />
           </div>
           {/* scroll area */}
           <ScrollArea className="w-full h-[680px] p-6">

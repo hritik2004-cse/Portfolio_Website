@@ -27,6 +27,24 @@ import {
 } from "@/components/ui/tooltip";
 
 const mySkills = [
+  // Core Fundamentals
+  {
+    icon: RiHtml5Fill,
+    name: "HTML",
+  },
+  {
+    icon: RiCss3Fill,
+    name: "CSS",
+  },
+  {
+    icon: RiJavascriptFill,
+    name: "Javascript",
+  },
+  {
+    icon: SiTypescript,
+    name: "Typescript",
+  },
+  // Frontend Frameworks & Styling
   {
     icon: RiReactjsFill,
     name: "React.js",
@@ -36,41 +54,23 @@ const mySkills = [
     name: "Next.js",
   },
   {
-    icon: RiHtml5Fill,
-    name: "HTML",
+    icon: RiTailwindCssFill,
+    name: "Tailwind CSS",
   },
   {
-    icon: RiJavascriptFill,
-    name: "Javascript",
+    icon: FaBootstrap,
+    name: "Bootstrap",
   },
-  {
-    icon: RiGithubFill,
-    name: "GitHub",
-  },
+  // Backend
   {
     icon: RiNodejsFill,
     name: "Node.js",
   },
   {
-    icon: RiTailwindCssFill,
-    name: "Tailwind CSS",
-  },
-  {
-    icon: RiCss3Fill,
-    name: "CSS",
-  },
-  {
-    icon: BiLogoPostgresql,
-    name: "Postgre SQL",
-  },
-  {
-    icon: SiPostman,
-    name: "Postman",
-  },
-  {
     icon: SiExpress,
     name: "Express.js",
   },
+  // Databases
   {
     icon: SiMongodb,
     name: "Mongo DB",
@@ -80,39 +80,47 @@ const mySkills = [
     name: "Mongoose",
   },
   {
-    icon: SiTypescript,
-    name: "Typescript",
+    icon: BiLogoPostgresql,
+    name: "Postgre SQL",
   },
   {
     icon: GrMysql,
     name: "My SQL",
   },
-  {
-    icon: FaBootstrap,
-    name: "Bootstrap",
-  },
+  // Tools
   {
     icon: FaGitAlt,
     name: "Git",
+  },
+  {
+    icon: RiGithubFill,
+    name: "GitHub",
+  },
+  {
+    icon: SiPostman,
+    name: "Postman",
   },
 ];
 
 const Skills = () => {
   return (
-    <div>
-      <h2 className="h2 mb-8">
+    <div className="pb-20 md:pb-0 w-full">
+      <h2 className="h2 mb-6 md:mb-8">
         My <span className="text-accent">Skills</span>
       </h2>
-      <div className="flex flex-wrap gap-6 max-w-sm xl:max-w-none   ">
+      <div className="flex flex-wrap gap-4 md:gap-6 max-w-xs xl:max-w-none w-full" >
         {mySkills.map((items, index) => {
           return (
             <TooltipProvider key={index}>
               <Tooltip>
-                <TooltipTrigger className="w-14 h-14 rounded-full flex items-center justify-center bg-tertiary/70 group">
-                  <items.icon className="text-3xl group-hover:text-accent transition-all duration-300" />
+                <TooltipTrigger className="md:w-14 md:h-14 rounded-full flex items-center justify-center md:bg-tertiary/70 group aspect-square">
+                  <items.icon
+                    className="text-4xl md:text-3xl group-hover:text-accent transition-all duration-300"
+                    title={items.name}
+                  />
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p className="text-lg">{items.name}</p>
+                  <p className="md:text-lg">{items.name}</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
