@@ -243,7 +243,7 @@ const Portfolio = () => {
     >
       <div className="container mx-auto w-full h-full flex flex-col justify-center">
         {/* heading */}
-        <h2 className="h2 mb-6 xl:mb-12 max-w-[600px]">
+        <h2 className="h2 mb-6 xl:mb-12 max-w-150">
           My Latest <span className="text-accent">Work</span>
         </h2>
         {/* tabs */}
@@ -258,7 +258,7 @@ const Portfolio = () => {
                 <TabsTrigger
                   key={category}
                   value={category}
-                  className="capitalize border border-white/10 data-[state=active]:bg-accent data-[state=active]:border-accent h-[48px] px-6 rounded-full"
+                  className="capitalize border border-white/10 data-[state=active]:bg-accent data-[state=active]:border-accent h-12 px-6 rounded-full"
                 >
                   {category}
                 </TabsTrigger>
@@ -266,7 +266,7 @@ const Portfolio = () => {
             })}
           </TabsList>
           {/* tabs content */}
-          <div className="md:h-auto h-[400px] lg:max-h-[400px] scrollbar scrollbar-thumb-accent scrollbar-track-accent/5 overflow-y-scroll xl:overflow-y-visible mt-12 lg:mt-0 w-full">
+          <div className="md:h-auto h-100 lg:max-h-100 scrollbar scrollbar-thumb-accent scrollbar-track-accent/5 overflow-y-scroll xl:overflow-y-visible mt-12 lg:mt-0 w-full">
             {categories.map((category) => {
               return (
                 <TabsContent key={category} value={category}>
@@ -277,7 +277,7 @@ const Portfolio = () => {
                     spaceBetween={30}
                     grabCursor={true}
                     allowTouchMove={true}
-                    className="w-full h-max xl:h-[460px]"
+                    className="w-full h-max xl:h-115"
                   >
                     {projects
                       .filter((project) => project.category === category)
@@ -286,7 +286,7 @@ const Portfolio = () => {
                           <SwiperSlide key={project.id}>
                             <div className="flex flex-col xl:flex-row gap-2 xl:gap-6">
                               {/* project info */}
-                              <div className="w-full max-w-[380px] md:max-w-full xl:max-w-[400px] flex flex-col justify-between xl:justify-center xl:gap-4 order-2 xl:order-0">
+                              <div className="w-full max-w-95 md:max-w-full xl:max-w-100 flex flex-col justify-between xl:justify-center xl:gap-4 order-2 xl:order-0">
                                 <h3 className="h3 text-accent mb-3 md:my-5 xl:mb-0 w-full">
                                   {project.title}
                                 </h3>
@@ -295,7 +295,7 @@ const Portfolio = () => {
                                   {project.tech.map((item, index) => {
                                     return (
                                       <li
-                                        className="flex items-center bg-[#a883ff]/13 h-[28px] px-[14px] rounded-full text-xs md:text-sm lg:text-md"
+                                        className="flex items-center bg-[#a883ff]/13 h-7 px-3.5 rounded-full text-xs md:text-sm lg:text-md"
                                         key={index}
                                       >
                                         {item}
@@ -309,13 +309,13 @@ const Portfolio = () => {
                                 </p>
                                 {/* buttons */}
                                 <div className="flex flex-col md:flex-row gap-4 items-center md:items-start w-full">
-                                  <Link href={project.link} target="_blank" className="w-full">
+                                  <Link href={project.link} target="_blank" rel="noopener noreferrer" className="w-full" aria-label={`View live demo of ${project.title}`}>
                                     <button className="btn btn-sm btn-accent flex gap-2 min-w-[98%]">
                                       <MdArrowOutward className="text-xl" />
                                       <span>Live Project</span>
                                     </button>
                                   </Link>
-                                  <Link href={project.github} target="_blank" className="w-full">
+                                  <Link href={project.github} target="_blank" rel="noopener noreferrer" className="w-full" aria-label={`View GitHub repository for ${project.title}`}>
                                     <button className="btn btn-sm btn-white flex gap-2 min-w-[98%]">
                                       <FaGithub className="text-xl" />
                                       <span>Github Repo</span>
@@ -324,10 +324,10 @@ const Portfolio = () => {
                                 </div>
                               </div>
                               {/* project img */}
-                              <div className="w-full h-[200px] md:h-[400px] lg:h-[500px] xl:h-[400px] relative bg-pink-50/10 order-1 xl:order-0 rounded-lg overflow-hidden">
+                              <div className="w-full h-50 md:h-100 lg:h-125 xl:h-100 relative bg-pink-50/10 order-1 xl:order-0 rounded-lg overflow-hidden">
                                 <Image
                                   src={project.image}
-                                  alt={project.image}
+                                  alt={`${project.title} — Project by Hritik Sharma`}
                                   fill
                                   loading='lazy'
                                   sizes="(max-width: 768px) 100vw, (max-width: 1130px) 60vw, 750px"

@@ -6,6 +6,7 @@ import { CiMenuFries } from 'react-icons/ci'
 import { MdFileDownload } from 'react-icons/md'
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import NavLinks from './NavLinks'
+import Link from 'next/link'
 
 const Header = () => {
     return (
@@ -15,8 +16,11 @@ const Header = () => {
                     <Logo />
                     <Sheet>
                         <SheetTrigger asChild>
-                            <button className="cursor-pointer text-[30px] text-white hover:text-accent transition-colors">
-                                <CiMenuFries />
+                            <button
+                                className="cursor-pointer text-[30px] text-white hover:text-accent transition-colors"
+                                aria-label="Open navigation menu"
+                            >
+                                <CiMenuFries aria-hidden="true" />
                             </button>
                         </SheetTrigger>
                         <SheetContent className='bg-primary border-0 flex flex-col justify-between items-center pt-16 pb-20' side='left'>
@@ -28,14 +32,18 @@ const Header = () => {
                                     Navigation Menu
                                 </SheetDescription>
                             </SheetHeader>
-                            <NavLinks containerStyles="flex flex-col gap-8 max-w-[100px]" />
+                            <nav aria-label="Mobile navigation">
+                                <NavLinks containerStyles="flex flex-col gap-8 max-w-[100px]" />
+                            </nav>
                             <div>
-                                <button className='btn btn-lg btn-tertiary mb-16'>
-                                    <div className='flex items-center gap-3 '>
-                                        <span>Download CV</span>
-                                        <MdFileDownload className='text-xl' />
-                                    </div>
-                                </button>
+                                <Link href="/Hritik_sharma_web_developer_resume.pdf" download aria-label="Download Hritik Sharma's CV">
+                                    <button className='btn btn-lg btn-tertiary mb-16'>
+                                        <div className='flex items-center gap-3'>
+                                            <span>Download CV</span>
+                                            <MdFileDownload className='text-xl' aria-hidden="true" />
+                                        </div>
+                                    </button>
+                                </Link>
                                 <Socials
                                     containerStyles='flex gap-4'
                                     iconStyles="bg-accent text-white hover:bg-accent-hover transition w-[40px] h-[40px] text-[20px] flex items-center justify-center rounded-full cursor-pointer"

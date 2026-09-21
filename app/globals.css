@@ -20,9 +20,14 @@
   --color-background: #0d091a;
   --color-foreground: #ffffff;
   --color-muted-foreground: #a1a1aa;
-  
+
   /* Fonts */
-  --font-family-primary: 'Sometype Mono', monospace;
+  --font-family-primary: "Sometype Mono", monospace;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-foreground);
 }
 
 /* Apply base styles to the body element */
@@ -31,6 +36,25 @@ body {
   color: white;
   line-height: 1.625;
   font-family: var(--font-family-primary);
+}
+
+/* Accessibility: visible focus outlines for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Screen reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 /* 4. Define reusable component classes using @apply.
@@ -60,7 +84,7 @@ body {
 
 /* Buttons */
 .btn {
-  @apply flex h-[45px] md:h-[56px] cursor-pointer items-center justify-center rounded-full font-medium transition-all;
+  @apply flex h-11.25 md:h-14 cursor-pointer items-center justify-center rounded-full font-medium transition-all;
 }
 
 .btn-sm {
@@ -68,7 +92,7 @@ body {
 }
 
 .btn-lg {
-  @apply min-w-[200px] px-6 text-base;
+  @apply min-w-50 px-6 text-base;
 }
 
 /* Button Color Variants */
@@ -91,5 +115,5 @@ body {
 
 /* Swiper pagination styling */
 .swiper-pagination {
-  display: none !important;  
+  display: none !important;
 }

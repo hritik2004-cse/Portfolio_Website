@@ -9,49 +9,60 @@ A modern, responsive portfolio website built with Next.js 15, showcasing my skil
 - **Smooth Animations**: Powered by Framer Motion for fluid transitions
 - **Interactive Components**: Custom navigation, sheets, and transitions
 - **Type Animations**: Dynamic text effects with react-type-animation
-- **Performance Optimized**: Built with Next.js 15 and Tailwind CSS v4
+- **Performance Optimized**: Built with Next.js 15 and Tailwind CSS v4 (Turbopack enabled)
 - **Accessibility**: Screen reader friendly with proper ARIA labels
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 15.4.4
-- **Styling**: Tailwind CSS v4
+- **Framework**: Next.js 15.4.10
+- **Runtime**: React 19.1.0
+- **Styling**: Tailwind CSS v4 + tailwind-scrollbar
 - **Animations**: Framer Motion
-- **UI Components**: Radix UI primitives
+- **UI Components**: Radix UI primitives (Dialog, ScrollArea, Tooltip)
 - **Icons**: Lucide React & React Icons
-- **Font**: Sometype Mono (Google Fonts)
-- **State Management**: React 19.1.0
+- **Font**: Sometype Mono (Google Fonts via `next/font/google`)
+- **Carousel**: Swiper.js
+- **Count-up Animations**: react-countup
+- **Type Animation**: react-type-animation
 
 ## 📁 Project Structure
 
 ```
 ├── app/
-│   ├── about/          # About page
-│   ├── contact/        # Contact page
-│   ├── experience/     # Experience page
-│   ├── portfolio/      # Portfolio/Projects page
-│   ├── layout.jsx      # Root layout
-│   ├── page.jsx        # Home page
-│   └── globals.css     # Global styles
+│   ├── about/                   # About page
+│   ├── contact/                 # Contact page with form
+│   ├── experience/              # Experience page
+│   ├── portfolio/               # Portfolio/Projects page
+│   ├── layout.jsx               # Root layout (font, nav, transitions)
+│   ├── page.jsx                 # Home page
+│   ├── globals.css              # Global styles & design tokens
+│   └── manifest.json            # PWA manifest
 ├── components/
-│   ├── ui/             # Reusable UI components
-│   ├── Header.jsx      # Mobile navigation header
-│   ├── MainNav.jsx     # Desktop navigation
-│   ├── PageTransition.jsx  # Page transition effects
-│   ├── Stats.jsx       # Statistics component
-│   ├── Skills.jsx      # Skills showcase
-│   └── ...            # Other components
+│   ├── ui/                      # Reusable UI components (Button, Input, Select, etc.)
+│   ├── Header.jsx               # Mobile navigation header
+│   ├── MainNav.jsx              # Desktop sidebar navigation
+│   ├── NavLinks.jsx             # Navigation link definitions
+│   ├── PageTransition.jsx       # Page transition wrapper
+│   ├── RectangleTransition.jsx  # Animated rectangle transition effect
+│   ├── Stats.jsx                # Statistics counter component
+│   ├── Skills.jsx               # Skills showcase
+│   ├── Socials.jsx              # Social media links
+│   ├── Info.jsx                 # Personal info component
+│   ├── Journey.jsx              # Journey/timeline component
+│   ├── Blob.jsx                 # Animated blob background
+│   ├── Gradient.jsx             # Background gradient
+│   └── Pattern.jsx              # Background pattern
 ├── lib/
-│   └── utils.js        # Utility functions
+│   └── utils.js                 # Utility functions (clsx + tailwind-merge)
 └── public/
-    └── assets/         # Images and icons
+    └── assets/                  # Images and icons (avatar, etc.)
 ```
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm, yarn, or pnpm
 
 ### Installation
@@ -59,7 +70,7 @@ A modern, responsive portfolio website built with Next.js 15, showcasing my skil
 1. **Clone the repository**
    ```bash
    git clone https://github.com/hritik2004-cse/Portfolio.git
-   cd nextjs-portfolio
+   cd Portfolio
    ```
 
 2. **Install dependencies**
@@ -85,7 +96,7 @@ A modern, responsive portfolio website built with Next.js 15, showcasing my skil
 
 ## 📜 Available Scripts
 
-- `npm run dev` - Start development server
+- `npm run dev` - Start development server (with Turbopack)
 - `npm run build` - Build for production
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
@@ -94,18 +105,21 @@ A modern, responsive portfolio website built with Next.js 15, showcasing my skil
 
 ### Colors
 The color scheme is defined in `app/globals.css` using CSS custom properties:
-- Primary: `#0d091a` (Dark purple)
-- Secondary: `#140e25` 
-- Accent: `#5810ff` (Purple)
+- Primary: `#0d091a` (Dark purple background)
+- Secondary: `#140e25` (Sidebar background)
+- Tertiary: `#201837`
+- Accent: `#5810ff` (Purple — buttons, highlights)
+- Accent Hover: `#4a0bde`
 
 ### Typography
-Using Sometype Mono font family for a modern, professional look.
+Using **Sometype Mono** font family loaded via `next/font/google` for a modern, monospace aesthetic.
 
 ### Components
 All components are modular and reusable. Key components include:
-- **Navigation**: Responsive navigation with mobile sheet overlay
-- **Page Transitions**: Smooth page-to-page animations
+- **Navigation**: Responsive navigation with mobile sheet overlay and desktop sidebar
+- **Page Transitions**: Smooth page-to-page animations with rectangle slide effect
 - **Interactive Elements**: Buttons, cards, and hover effects
+- **Socials**: Links to Facebook, Instagram, LinkedIn, GitHub, and YouTube
 
 ## 🚢 Deployment
 
@@ -127,7 +141,7 @@ This Next.js app can be deployed on any platform that supports Node.js:
 ## 📱 Browser Support
 
 - Chrome (latest)
-- Firefox (latest)  
+- Firefox (latest)
 - Safari (latest)
 - Edge (latest)
 
@@ -146,10 +160,11 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 📧 Contact
 
 **Hritik Sharma**
-- Portfolio: [Your Live Portfolio URL]
-- LinkedIn: [Your LinkedIn Profile]
-- Email: [Your Email]
+- LinkedIn: [hritik-sharma-oct04](https://www.linkedin.com/in/hritik-sharma-oct04/)
 - GitHub: [@hritik2004-cse](https://github.com/hritik2004-cse)
+- Email: [hritiksharma08725@gmail.com](mailto:hritiksharma08725@gmail.com)
+- YouTube: [@hritik_is_coding](https://youtube.com/@hritik_is_coding)
+- Instagram: [@hritik_sharma_2004](https://www.instagram.com/hritik_sharma_2004/)
 
 ---
 
