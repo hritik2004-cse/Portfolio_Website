@@ -86,6 +86,17 @@ const projects = [
   },
   {
     id: 5,
+    category: "Full-Stack",
+    title: "ToDo App",
+    description:
+      "A full-stack Todo application built with a Next.js frontend and an Express.js REST API backend. The project is organized as a monorepo with separate client and server workspaces managed by pnpm.",
+    github: "https://github.com/hritik2004-cse/ToDo_App",
+    link: "https://hritik-to-do-list.vercel.app/",
+    image: "/assets/work/todo.png",
+    tech: ["Next.js", "Tailwind CSS", "Node.js", "MongoDB", "CRUD","Mongoose"],
+  },
+  {
+    id: 6,
     category: "Frontend",
     title: "Recipe Nation - Recipe App",
     description:
@@ -96,7 +107,7 @@ const projects = [
     tech: ["React", "Tailwind CSS", "Next.js", "Shadcn-UI", "Node.js"],
   },
   {
-    id: 6,
+    id: 7,
     category: "Frontend",
     title: "Carvo - Car Rental Website",
     description:
@@ -107,7 +118,7 @@ const projects = [
     tech: ["React", "Tailwind CSS", "Next.js", "Shadcn-UI"],
   },
   {
-    id: 7,
+    id: 8,
     category: "Frontend",
     title: "MeloVibe — Your Calm Space",
     description:
@@ -118,7 +129,7 @@ const projects = [
     tech: ["JavaScript", "HTML", "Tailwind CSS", "Vite"],
   },
   {
-    id: 8,
+    id: 9,
     category: "Tools",
     title: "Currency Convertor",
     description:
@@ -129,7 +140,7 @@ const projects = [
     tech: ["JavaScript", "HTML", "Tailwind CSS", "Vite", "Exchange-Rate API"],
   },
   {
-    id: 9,
+    id: 10,
     category: "Tools",
     title: "Weather App",
     description:
@@ -140,7 +151,7 @@ const projects = [
     tech: ["JavaScript", "HTML", "CSS", "Open-Weather API"],
   },
   {
-    id: 10,
+    id: 11,
     category: "Tools",
     title: "Vowel Counter",
     description:
@@ -151,7 +162,7 @@ const projects = [
     tech: ["React", "Tailwind CSS", "Vite", "Shadcn-UI"],
   },
   {
-    id: 11,
+    id: 12,
     category: "Tools",
     title: "Age Calculator",
     description:
@@ -162,7 +173,7 @@ const projects = [
     tech: ["JavaScript", "HTML", "Tailwind CSS", "Vite"],
   },
   {
-    id: 12,
+    id: 13,
     category: "Tools",
     title: "FD Calculator",
     description:
@@ -173,7 +184,7 @@ const projects = [
     tech: ["JavaScript", "HTML", "CSS"],
   },
   {
-    id: 13,
+    id: 14,
     category: "Tools",
     title: "Random Color Generator",
     description:
@@ -184,7 +195,7 @@ const projects = [
     tech: ["JavaScript", "HTML", "CSS"],
   },
   {
-    id: 14,
+    id: 15,
     category: "Games",
     title: "Tic-Tac-Toe",
     description:
@@ -195,7 +206,7 @@ const projects = [
     tech: ["JavaScript", "HTML", "CSS"],
   },
   {
-    id: 15,
+    id: 16,
     category: "Frontend",
     title: "Spotify Clone",
     description:
@@ -206,7 +217,7 @@ const projects = [
     tech: ["HTML", "CSS"],
   },
   {
-    id: 16,
+    id: 17,
     category: "Frontend",
     title: "Netflix Clone",
     description:
@@ -217,7 +228,7 @@ const projects = [
     tech: ["HTML", "CSS"],
   },
   {
-    id: 17,
+    id: 18,
     category: "Frontend",
     title: "Destination.go - Travelling site",
     description:
